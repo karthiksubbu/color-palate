@@ -25,29 +25,16 @@ const toggleSelectedColor = (state = initState, { color }) => {
 };
 
 const toggleColorType = state => {
-  if (state.type === "HEX") {
-    return {
-      ...state,
-      type: "RGB"
-    };
-  } else if (state.type === "RGB") {
-    return {
-      ...state,
-      type: "HEX"
-    };
+  return {
+    ...state,
+    type: (state.type === "RGB") ? "HEX" : "RGB"
   }
 };
 
 const toggleFocusMode = state => {
-  if (state.focusMode === "ON") {
-    return {
-      ...state,
-      focusMode: "OFF"
-    };
-  }
   return {
     ...state,
-    focusMode: "ON"
+    focusMode: (state.focusMode === "OFF") ? "ON" : "OFF"
   }
 };
 
