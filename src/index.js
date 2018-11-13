@@ -1,10 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
+
+import store from "./app/store/store";
 import "./index.css";
 import App from "./app/layout/App";
 import * as serviceWorker from "./serviceWorker";
 
-const render = () => ReactDOM.render(<App />, document.getElementById("root"));
+const render = () =>
+  ReactDOM.render(
+    <Provider store={store}>
+      <App />
+    </Provider>,
+    document.getElementById("root")
+  );
 
 if (module.hot) {
   module.hot.accept("./app/layout/App", () => {

@@ -1,0 +1,42 @@
+.ColorCell {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  padding: 10rem;
+  text-align: center;
+  font-size: 2rem;
+  transition: 0.2s all;
+  backface-visibility: hidden;
+}
+
+.ColorCell:hover {
+  border-radius: 4px;
+  transform: scale(1.025);
+  box-shadow: 0 0px 0px 0px #ccc;
+}
+
+.ColorCell:hover .ColorCell:not(:hover) {
+  filter: blur(2px);
+}
+
+.ColorName {
+  font-weight: 600;
+  color: #555;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+}
+.HoverOptions {
+  transform: 0.2s all;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 10rem;
+  z-index: 100;
+}
+
+.HoverButton {
+  padding: 0.4rem 0.8rem;
+}

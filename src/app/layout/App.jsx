@@ -1,10 +1,14 @@
 import React, { Component } from "react";
 
+import Controls from "../../features/Controls/Controls";
+import ColorPalettes from "../../features/ColorPalettes/ColorPalettes";
+
 class App extends Component {
   render() {
     return (
-      <div>
-        <h4>Hello React!</h4>
+      <div className="App">
+        <Controls />
+        <ColorPalettes />
       </div>
     );
   }
